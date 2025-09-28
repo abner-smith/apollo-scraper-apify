@@ -1,58 +1,34 @@
 {
-  "title": "Fillout Apollo Connector Input",
+  "title": "Input",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "mode": {
-      "title": "Operation Mode",
-      "type": "string",
-      "description": "Choose how to run the actor",
-      "enum": ["webhook", "direct"],
-      "enumTitles": ["Webhook Mode (for Fillout integration)", "Direct Mode (manual input)"],
-      "default": "webhook"
-    },
-    "filloutWebhookData": {
-      "title": "Fillout Webhook Data",
-      "type": "object",
-      "description": "Raw webhook data received from Fillout (automatically populated in webhook mode)",
-      "editor": "json"
-    },
     "apolloSearchUrl": {
-      "title": "Apollo Search URL",
+      "title": "Apollo search URL",
       "type": "string",
-      "description": "The Apollo search URL to scrape leads from",
-      "editor": "textfield",
-      "example": "https://app.apollo.io/#/people?..."
+      "description": "Cole aqui a URL de busca do Apollo (com todos os filtros aplicados)."
+    },
+    "cookiesJson": {
+      "title": "Cookies (JSON)",
+      "type": "string",
+      "description": "Cole aqui os cookies exportados (JSON)."
     },
     "maxLeads": {
-      "title": "Maximum Leads",
+      "title": "Quantidade máxima de leads",
       "type": "integer",
-      "description": "Number of leads to extract (max 50,000 for paid users, 100 for free)",
       "minimum": 1,
-      "maximum": 50000,
-      "default": 100
+      "default": 150
     },
-    "apolloActorId": {
-      "title": "Apollo Scraper Actor ID",
-      "type": "string",
-      "description": "The Apify Actor ID for your Apollo scraper",
-      "editor": "textfield",
-      "example": "your-username/apollo-scraper"
+    "useApifyProxy": {
+      "title": "Usar Apify Proxy",
+      "type": "boolean",
+      "default": true
     },
     "notificationEmail": {
-      "title": "Notification Email",
+      "title": "E-mail para notificação (opcional)",
       "type": "string",
-      "description": "Email to notify when scraping is complete",
-      "editor": "textfield",
-      "format": "email"
-    },
-    "filloutApiKey": {
-      "title": "Fillout API Key",
-      "type": "string",
-      "description": "Your Fillout API key for sending responses back",
-      "editor": "textfield",
-      "isSecret": true
+      "description": "Caso queira receber notificação, informe um e-mail válido."
     }
   },
-  "required": ["mode"]
-} 
+  "required": ["apolloSearchUrl", "cookiesJson"]
+}
