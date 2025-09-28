@@ -6,18 +6,19 @@
     "apolloSearchUrl": {
       "title": "Apollo search URL",
       "type": "string",
-      "description": "Cole aqui a URL de busca do Apollo (com filtros aplicados).",
+      "description": "Cole aqui a URL da busca no Apollo (com os filtros aplicados). Abra o Apollo, filtre, copie a URL e cole aqui.",
       "editor": "textfield"
     },
     "cookiesJson": {
       "title": "Cookies (JSON)",
       "type": "string",
-      "description": "Cole aqui os cookies exportados (JSON).",
+      "description": "Cole aqui os cookies exportados do navegador em formato JSON (por exemplo via extensão).",
       "editor": "textarea"
     },
     "maxLeads": {
       "title": "Quantidade máxima de leads",
       "type": "integer",
+      "description": "Número máximo de leads a coletar neste run.",
       "minimum": 1,
       "default": 150,
       "editor": "number"
@@ -25,13 +26,14 @@
     "useApifyProxy": {
       "title": "Usar Apify Proxy",
       "type": "boolean",
+      "description": "Ative para usar o proxy da Apify durante a navegação.",
       "default": true,
       "editor": "checkbox"
     },
     "notificationEmail": {
       "title": "E-mail para notificação (opcional)",
       "type": "string",
-      "description": "Se quiser receber notificação, informe um e-mail.",
+      "description": "E-mail para receber notificação ao finalizar (opcional).",
       "editor": "textfield"
     }
   },
