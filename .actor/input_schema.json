@@ -6,28 +6,33 @@
     "apolloSearchUrl": {
       "title": "Apollo search URL",
       "type": "string",
-      "description": "Cole aqui a URL de busca do Apollo (com todos os filtros aplicados)."
+      "description": "Cole aqui a URL de busca do Apollo (com filtros aplicados).",
+      "editor": "textfield"
     },
     "cookiesJson": {
       "title": "Cookies (JSON)",
       "type": "string",
-      "description": "Cole aqui os cookies exportados (JSON)."
+      "description": "Cole aqui os cookies exportados (JSON).",
+      "editor": "textarea"
     },
     "maxLeads": {
       "title": "Quantidade máxima de leads",
       "type": "integer",
       "minimum": 1,
-      "default": 150
+      "default": 150,
+      "editor": "number"
     },
     "useApifyProxy": {
       "title": "Usar Apify Proxy",
       "type": "boolean",
-      "default": true
+      "default": true,
+      "editor": "checkbox"
     },
     "notificationEmail": {
       "title": "E-mail para notificação (opcional)",
       "type": "string",
-      "description": "Caso queira receber notificação, informe um e-mail válido."
+      "description": "Se quiser receber notificação, informe um e-mail.",
+      "editor": "textfield"
     }
   },
   "required": ["apolloSearchUrl", "cookiesJson"]
